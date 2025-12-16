@@ -10,7 +10,7 @@ import (
 //
 // Example usage:
 //
-//	var trace []strin = calltrace.Strings()
+//	var trace []string = calltrace.Strings()
 //
 // See also: [String]
 func Strings() []string {
