@@ -8,6 +8,16 @@ Online documentation, which includes examples, can be found at: http://godoc.org
 
 [![GoDoc](https://godoc.org/codeberg.org/reiver/go-calltrace?status.svg)](https://godoc.org/codeberg.org/reiver/go-calltrace)
 
+## Example
+
+Here is the simplest way to get a call-trace:
+
+```golang
+var trace string = calltrace.String()
+```
+
+This package has 2 other more advanced ways of gettnig the call-trace.
+
 ## Import
 
 To import package **calltrace** use `import` code like the following:
