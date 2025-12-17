@@ -2,7 +2,6 @@ package calltrace
 
 import (
 	"fmt"
-	"strings"
 )
 
 
@@ -18,13 +17,9 @@ func Strings() []string {
 	var trace []string
 
 	collectFrames := func(frame Frame) {
-		var filename string = frame.FilePath
+		var filename string = frame.ShortFilePath()
 
-		if index := strings.LastIndex(filename, "/"); 0 <= index {
-			filename = filename[1+index:]
-		}
-
-		s := fmt.Sprintf("%s():%s:%d", frame.QualifiedFunctionName, frame.FilePath, frame.LineNumber)
+		s := fmt.Sprintf("%s():%s:%d", frame.QualifiedFunctionName, filename, frame.LineNumber)
 
 		trace = append(trace, s)
 	}
